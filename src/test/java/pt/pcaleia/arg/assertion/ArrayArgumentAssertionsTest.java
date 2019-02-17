@@ -34,7 +34,7 @@ public final class ArrayArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * Class Tests
 	 */
 	
@@ -45,7 +45,7 @@ public final class ArrayArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertEmpty Tests
 	 */
 	
@@ -91,7 +91,7 @@ public final class ArrayArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNotEmpty Tests
 	 */
 	
@@ -136,7 +136,7 @@ public final class ArrayArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNonNullElements Tests
 	 */
 	

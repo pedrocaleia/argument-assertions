@@ -15,7 +15,7 @@ public final class StringArgumentAssertionsTest {
 	private static final String NON_EMPTY_STRING = "just a string";
 	
 	
-	/**
+	/*
 	 * Class Tests
 	 */
 	
@@ -26,7 +26,7 @@ public final class StringArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNotEmpty Tests
 	 */
 	

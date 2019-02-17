@@ -37,7 +37,7 @@ public final class CollectionArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * Class Tests
 	 */
 	
@@ -48,7 +48,7 @@ public final class CollectionArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertEmpty Tests
 	 */
 	
@@ -94,7 +94,7 @@ public final class CollectionArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNotEmpty Tests
 	 */
 	
@@ -139,7 +139,7 @@ public final class CollectionArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNonNullElements Tests
 	 */
 	

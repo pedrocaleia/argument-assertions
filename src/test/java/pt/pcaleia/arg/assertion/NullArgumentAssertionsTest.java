@@ -12,7 +12,7 @@ import org.junit.jupiter.api.function.Executable;
 public final class NullArgumentAssertionsTest {
 	
 	
-	/**
+	/*
 	 * Class Tests
 	 */
 	
@@ -23,7 +23,7 @@ public final class NullArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNull Tests
 	 */
 	
@@ -48,7 +48,7 @@ public final class NullArgumentAssertionsTest {
 	}
 	
 	
-	/**
+	/*
 	 * assertNotNull Tests
 	 */
 	
