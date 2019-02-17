@@ -4,7 +4,7 @@ package pt.pcaleia.arg.assertion;
 /**
  * @author Pedro Caleia
  */
-final class StringArgumentAssertions {
+public final class StringArgumentAssertions {
 	
 	
 	private static final String NULL_OR_EMPTY_MESSAGE = "The '%s' argument cannot be null or empty.";

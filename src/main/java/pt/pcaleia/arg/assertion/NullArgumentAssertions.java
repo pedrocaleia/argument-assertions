@@ -4,7 +4,7 @@ package pt.pcaleia.arg.assertion;
 /**
  * @author Pedro Caleia
  */
-final class NullArgumentAssertions {
+public final class NullArgumentAssertions {
 	
 	
 	private static final String MUST_BE_NULL_MESSAGE = "The '%s' argument must be null.";

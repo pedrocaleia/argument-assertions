@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 /**
  * @author Pedro Caleia
  */
-final class ArrayArgumentAssertions {
+public final class ArrayArgumentAssertions {
 	
 	
 	private static final String MUST_BE_EMPTY_MESSAGE = "The %s argument must not have any elements, even null ones.";
