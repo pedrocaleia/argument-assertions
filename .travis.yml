@@ -1,0 +1,37 @@
+language: java
+
+jdk: oraclejdk11
+
+before_install:
+  - chmod +x gradlew
+
+script:
+  - ./gradlew check jacocoTestCoverageVerification
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+after_success:
+  - ./gradlew jacocoTestReport coveralls
+
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: V/WCF7LccccZdGPngv5orovdDeIpa6V1G5f69LdQMPqnoE7InaB58keox5OutePgb8+3Xueq0vmNI9oPgq6KwpweUKF3rLeXn1UJ8eqGFRnR6R6Jx3LVciz2dHuUKQA2IhMudqtIDKRGd4PbZLfsyejeMvuK4OJKF96XYmL6TrHBtEy4YGo/xkMD07RSfbL3iATkQDwa9lTDxSLaa26WbcvvGZfMmTmQtz0KOFeY2NDjyE/BQOXCEToiSu87vNYWEdEsN4K6kaG6miI2h6DPn4oQkNIrZdU8VexOE2H8ocLXcErs/GdtfmE9mPjXvM79NUN44hnZJbSCIBGiUX5ivDMPgI9qW2TQluC9exqxBLIj0B5uOsfwyQd0BWbOjolEeDv1Qlh7zZ8IZ6iST/Ii3Mu6+mRHe3PWycvw8OYOgUwfmPAu8w+x7suhSLPByn/Q3j+gyToGu0a8/cdJv83JRER4uU0O+cprs2hBErmphfLZtz5KONJVq2VlvKPGYK1eND5/tecTNl9gWBWvur46gOKsJgw9C8W+VusUYviWulYOp+jk0/KXGwiSG+UvCyRP9l51zmrKjC/1mas2rM+Pz+jOnjkOxLWpFKw0x7TgeEyVz7haH9IJ8jirguhMdkvfm6utIbpmVNRvXiCd8TfrfIhFoqKAzvIfJRQWTINI9s4=
+    file_glob: true
+    file: "build/libs/*.jar"
+    on:
+      tags: true
+
+  - provider: script
+    skip_cleanup: true
+    script: ./gradlew bintrayUpload
+    on:
+      tags: true
